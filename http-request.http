@@ -1,0 +1,55 @@
+###
+# @name Method wrong
+POST http://localhost:8080/proxy
+Content-Type: application/json
+
+{
+  "method": "GE", "url": "https://google.com",
+  "Headers": {
+    "Authorization": "Basic bG9naW46cGFzc3dvcmQ=",
+    "Accept-Charset": "Accept-Charset: utf-8"
+  }
+}
+
+###
+# @name Method Not Allowed
+GET http://localhost:8080/proxy
+
+###
+# @name URL wrong
+POST http://localhost:8080/proxy
+Content-Type: application/json
+
+{
+  "method": "GET", "url": "google.com",
+  "Headers": {
+    "Authorization": "Basic bG9naW46cGFzc3dvcmQ=",
+    "Accept-Charset": "Accept-Charset: utf-8"
+  }
+}
+
+###
+# @name Data ok
+POST http://localhost:8080/proxy
+Content-Type: application/json
+
+{
+  "method": "GET", "url": "https://google.com",
+  "Headers": {
+    "Authorization": "Basic bG9naW46cGFzc3dvcmQ=",
+    "Accept-Charset": "Accept-Charset: utf-8"
+  }
+}
+
+###
+# @name Data ok v2
+POST http://localhost:8080/proxy
+Content-Type: application/json
+
+{
+  "method": "GET", "url": "https://yandex.ru",
+  "Headers": {
+    "Authorization": "Basic dF10aW46cGFzc3dvcmQ=",
+    "Accept-Charset": "Accept-Charset: utf-8"
+  }
+}
