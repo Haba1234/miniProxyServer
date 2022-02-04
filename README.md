@@ -8,7 +8,7 @@
     "url": "http://google.com",
     "headers": {
         "Authentication": "Basic bG9naW46cGFzc3dvcmQ=",
-        ....
+        "other keys": "..."
     }
 }
 ```
@@ -17,12 +17,12 @@
 {
   "data": {
     "id": "<generated unique id>",
-    "status": <HTTP status of 3rd-party service response>,
-    "headers": <headers array from 3rd-party service response>,
-    "length": <content length of 3rd-party service response>
+    "status": "<HTTP status of 3rd-party service response>",
+    "headers": "<headers array from 3rd-party service response>",
+    "length": "<content length of 3rd-party service response>"
   },
   "error": {
-    "message": "error text"
+    "message": "<error text>"
   }
 }
 ```
